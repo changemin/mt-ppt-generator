@@ -15,7 +15,6 @@ def get_img_list():
         if filename not in img_file_names:
             img_file_names.append(filename)
 
-
 def read_data():
     global quizes
     filename = "four-letter-game/data/data.txt"

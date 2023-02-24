@@ -5,7 +5,7 @@ quizes = []
 
 def read_data():
     global quizes
-    filename = "data.txt"
+    filename = "oxgame/data.txt"
     f = open(filename, "r", encoding="utf-8")
 
 
@@ -36,4 +36,14 @@ def ppt_gen():
     prs.save("output.pptx")
 
 read_data()
-ppt_gen()
+print(quizes)
+
+f = open("oxgame/data2.csv", "w", encoding="utf-8")
+msg = ""
+for quiz in quizes:
+    msg += f'{quiz["ans"]}\n'
+print(msg)
+f.write(msg)
+f.close()
+
+# ppt_gen()
